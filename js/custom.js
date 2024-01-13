@@ -55,7 +55,7 @@
           event.preventDefault();
           $('html, body').animate({
             scrollTop: target.offset().top - 74
-          }, 1000);
+          }, 100);
         }
       }
     });
