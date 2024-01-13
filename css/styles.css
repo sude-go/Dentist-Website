@@ -146,16 +146,20 @@ a:hover {
   background-color: var(--primary-color);
   border: none;
   position: absolute;
-  top: 100%;
-  bottom: 0;
-  left: 0;
+  top: 0;
+  left: 100%;
   transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
   right: 0;
   text-align: center;
 }
 
+.custom-link:hover{
+  border: 1px solid var(--primary-color);
+}
+
 .custom-link:hover::before {
-  top: 0;
+  left: 0;
+  border: none;
 }
 
 b,
@@ -305,6 +309,13 @@ strong {
   margin: 0 10px;
 }
 
+.featured-circle:hover .featured-number{
+  display: inline-block;
+  transition: all 1s;
+  transform: rotateY(360deg);
+  text-shadow: 4px 6px 20px #247cff;
+}
+
 /*---------------------------------------
   NAVIGATION              
 -----------------------------------------*/
@@ -322,11 +333,16 @@ strong {
   text-align: center;
 }
 
+.navbar-brand:hover {
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
 .navbar-brand strong {
   color: var(--p-color);
   font-size: 12px;
   position: relative;
   bottom: 5px;
+  text-shadow: none;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
@@ -428,6 +444,29 @@ strong {
   width: 5rem;
   font-size: 36px;
 }
+
+/* Treatments */
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.card:hover .card-body {
+  transform: translateY(0);
+}
+
 
 
 @media (max-width: 767px) {}
