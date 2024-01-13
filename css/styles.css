@@ -286,6 +286,9 @@ strong {
   font-weight: var(--font-weight-semibold);
 }
 
+.tab-content > .active {
+  display: flex;
+}
 
 .featured-circle {
   border-radius: 100%;

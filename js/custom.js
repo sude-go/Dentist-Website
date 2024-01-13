@@ -3,12 +3,10 @@
   
   "use strict";
 
-    // NAVBAR
     $('.navbar-nav .nav-link').click(function(){
         $(".navbar-collapse").collapse('hide');
     });
 
-    // REVIEWS CAROUSEL
     $('.reviews-carousel').owlCarousel({
         center: true,
         loop: true,
@@ -32,13 +30,11 @@
         }
     });
 
-    // Banner Carousel
     var myCarousel = document.querySelector('#myCarousel')
     var carousel = new bootstrap.Carousel(myCarousel, {
       interval: 1500,
     })
 
-    // REVIEWS NAVIGATION
     function ReviewsNavResize(){
       $(".navbar").scrollspy({ offset: -94 });
 
@@ -50,7 +46,6 @@
     $(window).on("resize", ReviewsNavResize);
     $(document).on("ready", ReviewsNavResize);
 
-    // HREF LINKS
     $('a[href*="#"]').click(function (event) {
       if (
         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
