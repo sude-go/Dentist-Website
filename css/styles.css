@@ -153,7 +153,7 @@ a:hover {
   text-align: center;
 }
 
-.custom-link:hover{
+.custom-link:hover {
   border: 1px solid var(--primary-color);
 }
 
@@ -258,7 +258,6 @@ strong {
 .hero .container {
   position: relative;
   overflow: hidden;
-  height: 580px;
 }
 
 #hero .container {
@@ -272,7 +271,7 @@ strong {
   border-radius: .5rem;
   position: absolute;
   z-index: 2;
-  bottom: 15vw;
+  bottom: 20vw;
   right: 0;
   padding: 1.5rem 2.5rem;
   width: 50%;
@@ -286,7 +285,7 @@ strong {
   font-weight: var(--font-weight-semibold);
 }
 
-.tab-content > .active {
+.tab-content>.active {
   display: flex;
 }
 
@@ -312,7 +311,7 @@ strong {
   margin: 0 10px;
 }
 
-.featured-circle:hover .featured-number{
+.featured-circle:hover .featured-number {
   display: inline-block;
   transition: all 1s;
   transform: rotateY(360deg);
@@ -606,10 +605,11 @@ strong {
   color: var(--primary-color);
 }
 
-@media screen and (min-width: 1600px) {
-  .hero .container {
-    height: 740px;
+@media screen and (max-width: 1600px) {
+  .carousel-item:before {
+    height: auto;
   }
+
 }
 
 @media screen and (max-width: 991px) {
@@ -656,13 +656,13 @@ strong {
     padding-bottom: 10px;
   }
 
-  .hero .container {
+  #hero .container {
     height: inherit;
   }
 
   .heroText {
     position: relative;
-    bottom: 267px;
+    bottom: 45vh;
     left: 0;
     width: auto;
     margin-bottom: -100px;
@@ -680,12 +680,20 @@ strong {
     padding: 1.5rem;
   }
 
+  .heroText p{
+    font-size: 14px;
+  }
+
   .animated-info {
     min-width: 125px;
   }
 
   .featured-circle {
     margin-top: 20px;
+  }
+
+  .carousel-item img{
+    object-position: 0;
   }
 
   .reviews-carousel .owl-nav {
@@ -709,6 +717,7 @@ strong {
 @media screen and (max-width: 480px) {
   .heroText {
     padding: 1rem;
+    bottom: 30vh;
   }
 
   .heroLinks .custom-link {
