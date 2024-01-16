@@ -287,6 +287,7 @@ strong {
 
 .tab-content>.active {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .featured-circle {
@@ -336,7 +337,8 @@ strong {
 }
 
 .navbar-brand:hover {
-  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  color: var(--primary-color);
+  text-shadow: 1px 1px 2px #1e1e1e;
 }
 
 .navbar-brand strong {
