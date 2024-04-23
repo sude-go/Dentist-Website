@@ -316,7 +316,6 @@ strong {
   display: inline-block;
   transition: all 1s;
   transform: rotateY(360deg);
-  text-shadow: 4px 6px 20px #247cff;
 }
 
 /*---------------------------------------
